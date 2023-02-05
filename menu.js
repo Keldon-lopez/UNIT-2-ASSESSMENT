@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+let pizza = {
+    name: "Mark",
+    price: "5.03",
+    category: "entree",
+    popularity: 14,
+    rating: 4,
+    tags: ["wow","very wow", "Kids", "Adult", "cheap"],
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +50,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +60,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -63,7 +70,8 @@
 */
 
 //CODE HERE
-
+let price = pizza.price;
+console.log(price);
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +81,8 @@
 */
 
 //CODE HERE
-
+let category = pizza.category
+console.log(category);
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,7 +97,48 @@
 */
 
 //CODE HERE
-
+let foodArr = [
+    {
+        name: "Pepperoni",
+        price: "10",
+        category: "entree",
+        popularity: 90,
+        rating: 7,
+        tags: ["Party","dairy", "Quick" ,"cheap"],
+    },
+    {
+        name: "Cheese",
+        price: "10",
+        category: "entree",
+        popularity: 75,
+        rating: 6,
+        tags: ["Kids", "Dairy", "Quick"],
+    },
+    {
+        name: "Meat Lovers",
+        price: "13",
+        category: "entree",
+        popularity: 65,
+        rating: 6,
+        tags: ["Meat","Adults", "Heavy"],
+    },
+    {
+        name: "Combo",
+        price: "14",
+        category: "entree",
+        popularity: 75,
+        rating: 7,
+        tags: ["Favorite","Everything", "Kids", "Adult", ],
+    },
+    {
+        name: "Veggie",
+        price: "12",
+        category: "entree",
+        popularity: 55,
+        rating: 5,
+        tags: ["Light","Veggie", "Adult", "Fresh"],
+    }
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -105,9 +155,9 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(pizza => pizza.tags.includes("Kids"))
 
-
+console.log(filteredFood);
 
 //////////////////PROBLEM 5////////////////////
 /* 
