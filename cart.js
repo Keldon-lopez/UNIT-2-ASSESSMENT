@@ -60,6 +60,10 @@ console.log(summedPrice);
 */
 
 //CODE HERE
+const calcFinalPrice = (cartTotal,couponValue, tax) =>{
+    let preDiscount = cartTotal + (cartTotal * tax);
+    return preDiscount - couponValue;
+}
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -83,6 +87,9 @@ console.log(summedPrice);
 
 /*
     TEXT ANSWER HERE
+    I chose name and email as this will be the best way to confirm who the customer is.
+    I also added the address as that will be needed in billing for customers and also shipping. Sometimes this will have to be separate values so we would need to add a new billing address property
+    I have the subscribed property as many online services have some sort of subscriptions
 
 */
 
@@ -92,3 +99,11 @@ console.log(summedPrice);
 */
 
 //CODE HERE
+const customers= [
+    {
+        name: "Austin Nielsen",
+        email: "austin@Nielsen.com",
+        address: "123 Cool Rd Fake, UT 84042",
+        subscribed: true,
+    }
+]
