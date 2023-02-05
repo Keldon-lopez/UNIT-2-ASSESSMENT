@@ -57,7 +57,6 @@ const canWeDeliver = zipCode => {
         return `Sorry, we can't deliver to that address`;
     }
 }
-console.log(canWeDeliver(85205))
 
 /* 
     Problem 2 Continued
@@ -77,8 +76,17 @@ console.log(canWeDeliver(85205))
 */
 
 // CODE HERE
-
-
+const canWeDeliverTwo = zipCode => {
+    for (let index = 0; index < deliveryAreaZipCodes.length; index++) {
+        const element = deliveryAreaZipCodes[index];
+        if (element === zipCode) {
+            return `You're in our delivery zone!`;
+        }
+    
+    }
+    
+    return `Sorry, we can't deliver to that address`;
+}
 //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
@@ -114,6 +122,7 @@ const deals = [
 
 //CODE HERE
 
+deals[0].title = deals[0].title.replace(`15%`, '10%')
 
 
 /*
@@ -130,3 +139,4 @@ const deals = [
 */
 
 //CODE HERE
+deals[1].desc = deals[1].desc.replace(`March`, 'April')
