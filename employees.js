@@ -91,7 +91,18 @@ empTwo.name = 'Nick';
 */
 
 //CODE HERE
-
+class Manager extends Employee{
+    constructor(name, shifts, employees){
+        super(name, shifts)
+        this.employees = employees
+    }
+    getEmployees(){
+        console.log(`${this.name} manages ${this.employees}`)
+    }
+    addEmployee(emp){
+        this.employees.push(emp);
+    }
+}
 
 
 /*
@@ -106,7 +117,7 @@ empTwo.name = 'Nick';
 */
 
 //CODE HERE
-
+let manager = new Manager("Winston","weekday mornings, weekday afternoons", ["Cece","Schmidt"]);
 
 /*
     Call the `getEmployees` method on the
@@ -114,7 +125,7 @@ empTwo.name = 'Nick';
 */
 
 //CODE HERE
-
+manager.getEmployees();
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
@@ -122,7 +133,7 @@ empTwo.name = 'Nick';
 */
 
 //CODE HERE 
-
+manager.addEmployee("Coach");
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
@@ -130,3 +141,4 @@ empTwo.name = 'Nick';
 */
 
 //CODE HERE
+manager.getEmployees();
